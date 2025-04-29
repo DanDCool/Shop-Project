@@ -5,6 +5,11 @@ public class Product {
     private String picture;
     private String name;
 
+    public Product(double price, String picture, String name) {
+        this.price = price;
+        this.picture = picture;
+        this.name = name;
+    }
     public double getPrice() {
         return price;
     }

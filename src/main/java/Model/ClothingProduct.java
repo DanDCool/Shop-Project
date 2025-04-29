@@ -6,6 +6,13 @@ public class ClothingProduct extends Product{
     private String brand;
     private ClotheType clotheType;
 
+    public ClothingProduct(double price, String picture, String name, String color, Size size, String brand, ClotheType clotheType) {
+        super(price, picture, name);
+        this.color = color;
+        this.size = size;
+        this.brand = brand;
+        this.clotheType = clotheType;
+    }
     public String getColor() {
         return color;
     }
