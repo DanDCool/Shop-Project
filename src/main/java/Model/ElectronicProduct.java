@@ -5,6 +5,11 @@ import java.io.StringReader;
 public class ElectronicProduct extends Product{
     private String company;
     private double power;
+    public ElectronicProduct(double price, String picture, String name, String company, double power) {
+        super(price, picture, name);
+        this.company = company;
+        this.power = power;
+    }
 
     public String getCompany() {
         return company;
