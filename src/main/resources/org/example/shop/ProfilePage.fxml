@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -28,6 +29,7 @@
                   </Label>
                   <Label text="Your information:" />
                   <Label fx:id="information" text="user information" />
+                  <ListView fx:id="productList" prefHeight="200.0" prefWidth="200.0" />
                   <HBox fx:id="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                      <children>
                         <Button mnemonicParsing="false" onAction="#buyCredit" text="Buy credit" />

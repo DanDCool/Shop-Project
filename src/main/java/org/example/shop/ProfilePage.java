@@ -1,6 +1,8 @@
 package org.example.shop;
 
 import Controller.UserController;
+import Model.Database;
+import Model.Product;
 import Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
@@ -24,6 +27,9 @@ public class ProfilePage implements Initializable {
 
     @FXML
     private Label information;
+
+    @FXML
+    private ListView<String> productList;
 
     public void goToHomePage(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
@@ -45,6 +51,9 @@ public class ProfilePage implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        for(Product x: Database.getDatabase().getAllProducts()) {
+            productList.getItems().add(x.toString());
+        }
         information.setText("Your information\nYour name: " + UserController.currentUser.getName() +"\n"
         + "Your password: " + UserController.currentUser.getPassword() + "\n" +
                 "Your credit: " + UserController.currentUser.getMoney());

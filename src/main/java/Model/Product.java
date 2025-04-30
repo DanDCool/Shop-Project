@@ -33,4 +33,8 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
+    public String toString(){
+        return (this.getName() + " | Price: " + this.getPrice() + " | Product type: "
+                + this.getClass());
+    }
 }
