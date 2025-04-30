@@ -28,17 +28,17 @@ public class UserController {
     }
     public String logout(){
         currentUser = null;
-        return "logout Succesfule";
+        return "logout Successful";
     }
     public String increaseMoney(double money){
         currentUser.setMoney(currentUser.getMoney() + money);
-        return "increase Succesfule";
+        return "increase Successful";
     }
     public String buyProduct(Product product){
         if (currentUser.getMoney() >= product.getPrice()){
             currentUser.setMoney(currentUser.getMoney() - product.getPrice());
             currentUser.getBuyedProducts().add(product);
-            return "buy Succesfule";
+            return "buy Successful";
         }
         return "buy Failed";
     }
