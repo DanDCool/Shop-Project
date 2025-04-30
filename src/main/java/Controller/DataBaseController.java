@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class DataBaseController {
     private static DataBaseController database;
-    private Database data;
     private DataBaseController(){
 
     }
@@ -19,9 +18,9 @@ public class DataBaseController {
         return database;
     }
     public ArrayList<User> getUsers(){
-        return data.getAllUsers();
+        return Database.getDatabase().getAllUsers();
     }
     public ArrayList<Product> getProduct(){
-        return data.getAllProducts();
+        return Database.getDatabase().getAllProducts();
     }
 }

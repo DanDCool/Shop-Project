@@ -4,6 +4,15 @@ import Model.Product;
 import Model.User;
 
 public class UserController {
+    private static UserController userController;
+    private UserController(){
+    }
+    public static UserController getUserController(){
+        if(userController == null){
+            userController = new UserController();
+        }
+        return userController;
+    }
     public User currentUser;
     public void addUser(String name, String password, double money){
         DataBaseController.getInstance().getUsers().add(new User(name, password, money));

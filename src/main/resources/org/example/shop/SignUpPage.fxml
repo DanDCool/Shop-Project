@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.shop.SignUpPage">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.shop.MainPage">
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -16,8 +15,8 @@
                   <Font name="Centaur" size="39.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" text="Sign Up" />
-            <Button mnemonicParsing="false" text="Login" />
+            <Button mnemonicParsing="false" onAction="#goToSignUpPage" text="Sign Up" />
+            <Button mnemonicParsing="false" onAction="#goToLoginpage" text="Login" />
          </children>
       </VBox>
    </children>

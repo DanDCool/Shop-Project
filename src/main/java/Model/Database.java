@@ -3,8 +3,15 @@ package Model;
 import java.util.ArrayList;
 
 public class Database {
-    private ArrayList<User> allUsers;
-    private ArrayList<Product> allProducts;
+    private static Database database;
+    public static Database getDatabase(){
+        if(database == null){
+            database = new Database();
+        }
+        return database;
+    }
+    private ArrayList<User> allUsers = new ArrayList<>();
+    private ArrayList<Product> allProducts = new ArrayList<>();
 
     public ArrayList<Product> getAllProducts() {
         return allProducts;
