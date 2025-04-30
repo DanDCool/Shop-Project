@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class User extends Account{
     private double money;
-    private ArrayList<Product> buyedProducts;
+    private ArrayList<Product> buyedProducts = new ArrayList<>();
 
     public ArrayList<Product> getBuyedProducts() {
         return buyedProducts;

@@ -44,17 +44,17 @@ public class ProfilePage implements Initializable {
     }
     public void buyCredit(ActionEvent actionEvent){
         UserController.getUserController().increaseMoney(Double.parseDouble(credit.getText()));
-        information.setText("Your information\nYour name: " + UserController.currentUser.getName() +"\n"
+        information.setText("Your name: " + UserController.currentUser.getName() +"\n"
                 + "Your password: " + UserController.currentUser.getPassword() + "\n" +
                 "Your credit: " + UserController.currentUser.getMoney());
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        for(Product x: Database.getDatabase().getAllProducts()) {
+        for(Product x: UserController.currentUser.getBuyedProducts()) {
             productList.getItems().add(x.toString());
         }
-        information.setText("Your information\nYour name: " + UserController.currentUser.getName() +"\n"
+        information.setText("Your name: " + UserController.currentUser.getName() +"\n"
         + "Your password: " + UserController.currentUser.getPassword() + "\n" +
                 "Your credit: " + UserController.currentUser.getMoney());
     }
