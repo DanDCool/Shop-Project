@@ -13,18 +13,18 @@ public class UserController {
         }
         return userController;
     }
-    public User currentUser;
+    public static User currentUser;
     public void addUser(String name, String password, double money){
         DataBaseController.getInstance().getUsers().add(new User(name, password, money));
     }
-    public String login(String name, String password){
-        for (User user : DataBaseController.getInstance().getUsers()){
-            if (user.getName().equals(name) && user.getPassword().equals(password)){
+    public boolean login(String name, String password) {
+        for (User user : DataBaseController.getInstance().getUsers()) {
+            if (user.getName().equals(name) && user.getPassword().equals(password)) {
                 currentUser = user;
-                return "login Succesfule";
+                return true;
             }
         }
-        return "login Failed";
+        return false;
     }
     public String logout(){
         currentUser = null;

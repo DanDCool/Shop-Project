@@ -5,32 +5,41 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.shop.SignUpPage">
    <children>
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER" prefHeight="427.0" prefWidth="600.0">
          <children>
-            <Label text="Sign Up">
-               <font>
-                  <Font name="Script MT Bold" size="35.0" />
-               </font>
-            </Label>
-            <TextField fx:id="name" promptText="name">
-               <VBox.margin>
-                  <Insets left="100.0" right="100.0" />
-               </VBox.margin></TextField>
-            <TextField fx:id="password" promptText="password">
-               <VBox.margin>
-                  <Insets left="100.0" right="100.0" />
-               </VBox.margin></TextField>
-            <TextField fx:id="money" promptText="money">
-               <VBox.margin>
-                  <Insets left="100.0" right="100.0" />
-               </VBox.margin></TextField>
-            <Button mnemonicParsing="false" onAction="#signUp" text="Sign Up" />
+            <VBox alignment="CENTER" prefHeight="367.0" prefWidth="349.0" spacing="50.0">
+               <children>
+                  <Label text="Sign Up">
+                     <font>
+                        <Font name="Script MT Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" promptText="name">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="password" promptText="password">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="money" promptText="money">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#signUp" text="Sign Up" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#goMainPage" text="Back" />
          </children>
-      </VBox>
+      </HBox>
    </children>
 </AnchorPane>

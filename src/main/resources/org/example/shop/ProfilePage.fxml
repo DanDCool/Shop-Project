@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.shop.ProfilePage">
    <children>
       <HBox layoutY="5.0" prefHeight="400.0" prefWidth="600.0">
@@ -16,7 +15,7 @@
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
                <children>
                   <Label text="sidebar" />
-                  <Button mnemonicParsing="false" text="Home Page" />
+                  <Button mnemonicParsing="false" onAction="#goToHomePage" text="Home Page" />
                   <Button mnemonicParsing="false" text="Profile Page" />
                </children>
             </VBox>
@@ -28,14 +27,14 @@
                      </font>
                   </Label>
                   <Label text="Your information:" />
-                  <Label text="user information" />
+                  <Label fx:id="information" text="user information" />
                   <HBox fx:id="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Buy credit" />
-                        <TextField promptText="buy credit" />
+                        <Button mnemonicParsing="false" onAction="#buyCredit" text="Buy credit" />
+                        <TextField fx:id="credit" promptText="buy credit" />
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" text="Logout" />
+                  <Button mnemonicParsing="false" onAction="#logOut" text="Logout" />
                </children>
             </VBox>
          </children>

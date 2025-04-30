@@ -24,4 +24,9 @@ public class SignUpPage {
         Scene mainScene = new Scene(fxmlLoader.load());
         HelloApplication.mainStage.setScene(mainScene);
     }
+    public void goMainPage(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SignUpPage.fxml"));
+        Scene mainScene = new Scene(fxmlLoader.load());
+        HelloApplication.mainStage.setScene(mainScene);
+    }
 }
